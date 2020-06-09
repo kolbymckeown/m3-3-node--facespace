@@ -17,7 +17,17 @@ const handleHomepage = (req, res) => {
 };
 
 const handleProfilePage = (req, res) => {
-  res.status(200).render(`pages/profile`, { users: users })
+  const userId = req.params._id
+  const user = users.find((elem) => {
+    if (elem._id === userId) return true;
+  })
+  if (user) {
+  res.status(200).render(`pages/profile`, { 
+    title: user,
+    user: user }) // outputting blank page (Not showing users.name)
+
+}
+
 };
 
 // -----------------------------------------------------
