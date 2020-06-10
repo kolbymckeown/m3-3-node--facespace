@@ -52,6 +52,9 @@ const handleName = (req, res) => {
   }
 };
 
+// Questions: Change Sign In to greeting on someones profile
+// CSS Hover transition snapping back
+
 // -----------------------------------------------------
 // server endpoints
 express()

@@ -12,4 +12,13 @@
 }
 .homepage__all--user img {
   width: 120px;
+
 }
+
+.homepage__all--user:hover {
+  transition: 500ms ease-in-out;
+  transform: scale(1.1);
+
+}
+
+
