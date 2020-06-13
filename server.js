@@ -41,7 +41,7 @@ const handleSignin = (req, res) => {
 const handleName = (req, res) => {
   const firstName = req.query.firstName;
   const user = users.find((elem) => {
-    if (elem._id === firstName || elem.name === firstName) return true;
+    if (elem._id === firstName || elem.name.toLocaleLowerCase() === firstName.toLocaleLowerCase()) return true;
   });
 
   if (user) {
